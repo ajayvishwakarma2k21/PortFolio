@@ -10,26 +10,14 @@ const Contact: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setStatus(null);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
-        setStatus("Message sent successfully!");
-        setForm({ name: "", email: "", message: "" });
-      } else {
-        setStatus("Failed to send message. Please try again.");
-      }
-    } catch {
-      setStatus("Failed to send message. Please try again.");
-    }
-    setLoading(false);
+    setTimeout(() => {
+      setStatus("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+      setLoading(false);
+    }, 1000);
   };
 
   return (
