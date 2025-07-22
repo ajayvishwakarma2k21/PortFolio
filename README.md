@@ -67,10 +67,5 @@ Feel free to fork, submit pull requests, or open issues!
 
 ---
 
-## 📄 License
-
-MIT License. See [LICENSE](LICENSE) for details.
-
----
 
 > Made with ❤️ by [ajayvishwakarma2k21](https://github.com/ajayvishwakarma2k21)
